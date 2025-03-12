@@ -1,0 +1,255 @@
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  font-family : Redaction10-Regular;
+  display: flex;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+color: black;}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s ease; 
+}
+
+a:hover {
+  color: yellow;
+  animation: fadeIn 2s forwards; 
+}
+
+.circle {
+  --circle-size: 40px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid black;
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: 'Redaction50-Bold';
+  src: url('Redaction50-Bold.woff2') format('woff2'),
+       url('Redaction50-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Redaction10-Regular';
+  src: url('Redaction10-Regular.woff2') format('woff2'),
+       url('Redaction10-Regular.woff') format('woff');
+}
+
+.header {
+  width: 33.5vw;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  z-index: 1000; 
+  }
+  
+.maelle {
+  font-family: 'Redaction50-Bold';
+  padding-left: 2vw;
+  padding-top: 2vw;
+  height: 28vh;
+  font-size: 150px;
+  }
+  
+.menu {
+  margin-left: 2vw;
+  margin-top: 0.35vw;
+  margin-right: 18vw;
+  font-size: 15px;
+  border-bottom: solid 2px;
+  }
+  
+.bas {
+  margin-top: 5vh;
+  }
+  
+.about {
+  margin-left: 2vw;
+  margin-top: 0.35vw;
+  margin-right: 18vw;
+  font-size: 15px;
+  }
+  
+.droit {
+margin-left:30vw;
+padding-bottom:30vw;
+background-color:#2D2DAA;
+display:flex;
+width: 65vw;
+height:100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery-track {
+  margin-right: 1vw;
+  margin-top: 15vh;
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #fbb58c;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+    font-family : Redaction10-Regular;
+  font-size: 14px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.card {
+  height: 45vh;
+  align-text: center;
+  overflow: hidden;
+
+  & .card-image-wrapper {
+    height: 135%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+} 
+
+.card-image-wrapper {
+  height: auto; /* Ajuste la hauteur en fonction du contenu */
+  min-height: 300px; /* Ajuste selon ton design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column; /* Permet d'empiler les éléments */
+    align-items: center;
+    width: 100vw;
+    overflow-x: hidden; /* Évite tout décalage horizontal */
+  }
+
+  .menu {
+    display: none; /* Supprime le menu latéral */
+  }
+
+  .maelle {
+    font-size: 12vw; /* Rend le titre responsive */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2vh;
+  }
+
+  .droit {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 5vh; /* Ajoute de l'espace sous la galerie */
+    position: relative;
+    z-index: 1;
+  }
+
+  .gallery-track {
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    gap: 1rem;
+    width: 95vw;
+  }
+
+  .card {
+    width: 100%; /* Les images prennent toute la largeur de l'écran */
+    height: auto; /* Ajustement automatique */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Garde un bon rendu */
+  }
+
+  .bas {
+    position: fixed;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px; /* Augmente la taille pour être lisible */
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; }
+    
+   .overlay {
+    opacity: 0; /* Désactivé par défaut */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+
+  .container:hover .overlay {
+    opacity: 1; /* Activation plus discrète */
+  }
+
+  /* Réduit la zone d'activation du hover */
+  .container {
+    pointer-events: none; /* Désactive le hover globalement */
+  }
+
+  .container img {
+    pointer-events: auto; /* Rétablit le hover uniquement sur l'image */
+  }
+
+  }
+}
