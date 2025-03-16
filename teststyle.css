@@ -192,6 +192,9 @@ height:100%;
   .menu {
     display: none; /* Supprime le menu latéral */
   }
+  .menubis {
+    display: none; /* Supprime le menu latéral */
+  }
 
   .maelle {
     font-size: 12vw; /* Rend le titre responsive */
