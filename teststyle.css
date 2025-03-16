@@ -55,6 +55,12 @@ a:hover {
        url('Redaction10-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Estrella';
+  src: url('Estrella.woff2') format('woff2'),
+       url('Estrella.woff') format('woff');
+}
+
 .header {
   width: 33.5vw;
   position: fixed; 
@@ -64,7 +70,7 @@ a:hover {
   }
   
 .maelle {
-  font-family: 'Redaction50-Bold';
+  font-family: 'Estrella';
   padding-left: 2vw;
   padding-top: 2vw;
   height: 28vh;
@@ -73,15 +79,24 @@ a:hover {
   
 .menu {
   margin-left: 2vw;
+  width: 18vw;
   margin-top: 0.35vw;
   margin-right: 18vw;
-  font-size: 15px;
+  font-size: 14px;
   border-bottom: solid 2px;
   }
   
-.bas {
-  margin-top: 5vh;
+.menubis {
+  margin-left: 2vw;
+  width: 18vw;
+  margin-top: 0.35vw;
+  margin-right: 18vw;
+  font-size: 14px;
   }
+  
+.bas {
+  margin-top: 35%;
+bottom:0;  }
   
 .about {
   margin-left: 2vw;
