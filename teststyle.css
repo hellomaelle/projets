@@ -62,7 +62,8 @@ a:hover {
 }
 
 .header {
-  width: 33.5vw;
+  width: 28.5vw;
+  height:100vh;
   position: fixed; 
   top: 0; 
   left: 0;
@@ -106,11 +107,11 @@ bottom:0;  }
   }
   
 .droit {
-margin-left:30vw;
+margin-left:22vw;
 padding-bottom:30vw;
 background-color:#2D2DAA;
 display:flex;
-width: 65vw;
+width: 73vw;
 height:100%;
 }
 
@@ -122,6 +123,7 @@ height:100%;
 
 .gallery-track {
   margin-right: 1vw;
+  margin-left: 0.5vw;
   margin-top: 15vh;
   position: fixed;
   display: grid;
@@ -174,8 +176,8 @@ height:100%;
 } 
 
 .card-image-wrapper {
-  height: auto; /* Ajuste la hauteur en fonction du contenu */
-  min-height: 300px; /* Ajuste selon ton design */
+  height: auto; 
+  min-height: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,10 +192,10 @@ height:100%;
   }
 
   .menu {
-    display: none; /* Supprime le menu latéral */
+    display: none; 
   }
   .menubis {
-    display: none; /* Supprime le menu latéral */
+    display: none; 
   }
 
   .maelle {
@@ -257,10 +259,9 @@ height:100%;
   }
 
   .container:hover .overlay {
-    opacity: 1; /* Activation plus discrète */
+    opacity: 1;
   }
 
-  /* Réduit la zone d'activation du hover */
   .container {
     pointer-events: none; /* Désactive le hover globalement */
   }
