@@ -160,12 +160,12 @@ height:100%;
 
 
 .card {
-  height: 45vh;
+  height: 50vh;
   align-text: center;
   overflow: hidden;
 
   & .card-image-wrapper {
-    height: 135%;
+    height: 125%;
 
     & img {
       width: 100%;
